@@ -5,42 +5,42 @@ import java.util.Scanner;
 
 
 public class VaccineCheck extends SelfRegistration{
-	String city;											// to get code of city
-	LinkedHashMap<Integer,String> Che;						//Chennai vaccine list
-	LinkedHashMap<Integer,String> Coim;						//Coimbatore Vaccine list
-	LinkedHashMap<Integer,String> Tric;						//Trichy Vaccine list
+	String city;									// to get code of city
+	LinkedHashMap<Integer,String> Chennai;						//Chennai vaccine list
+	LinkedHashMap<Integer,String> Coimbatore;					//Coimbatore Vaccine list
+	LinkedHashMap<Integer,String> Trichy;						//Trichy Vaccine list
 	
 	void Check() {
-	Che = new LinkedHashMap<>();
+	Chennai = new LinkedHashMap<>();
 	
-	Che.put(1,"Chennai \tAmbattur \t70 dose");
-	Che.put(2,"Chennai \tAnna Nagar \t100 dose");
-	Che.put(3,"Chennai \tChrompet \t30 dose");
-	Che.put(4,"Chennai \tGuindy \t\t60 dose");
-	Che.put(5,"Chennai \tKodambakkam \t90 dose");
-	Che.put(6,"Chennai \tPallavaram \t50 dose");
-	Che.put(7,"Chennai \tPorur  \t\t80 dose");
+	Chennai.put(1,"Chennai \tAmbattur \t70 dose");
+	Chennai.put(2,"Chennai \tAnna Nagar \t100 dose");
+	Chennai.put(3,"Chennai \tChrompet \t30 dose");
+	Chennai.put(4,"Chennai \tGuindy \t\t60 dose");
+	Chennai.put(5,"Chennai \tKodambakkam \t90 dose");
+	Chennai.put(6,"Chennai \tPallavaram \t50 dose");
+	Chennai.put(7,"Chennai \tPorur  \t\t80 dose");
 	
-	Coim = new LinkedHashMap<>();
+	Coimbatore = new LinkedHashMap<>();
 	
-	Coim.put(1,"Coimbatore \tGandhipuram \t75 dose");
-	Coim.put(2,"Coimbatore \tKovaipudur \t90 dose");
-	Coim.put(3,"Coimbatore \tSaibaba colony \t35 dose");
-	Coim.put(4,"Coimbatore \tThondamuthur \t80 dose");
-	Coim.put(5,"Coimbatore \tSinganallur \t110 dose");
-	Coim.put(6,"Coimbatore \tKottaimedu \t50 dose");
-	Coim.put(7,"Coimbatore \tRamnagar \t60 dose");
+	Coimbatore.put(1,"Coimbatore \tGandhipuram \t75 dose");
+	Coimbatore.put(2,"Coimbatore \tKovaipudur \t90 dose");
+	Coimbatore.put(3,"Coimbatore \tSaibaba colony \t35 dose");
+	Coimbatore.put(4,"Coimbatore \tThondamuthur \t80 dose");
+	Coimbatore.put(5,"Coimbatore \tSinganallur \t110 dose");
+	Coimbatore.put(6,"Coimbatore \tKottaimedu \t50 dose");
+	Coimbatore.put(7,"Coimbatore \tRamnagar \t60 dose");
 	
-	Tric = new LinkedHashMap<>();
+	Trichy = new LinkedHashMap<>();
 	
-	Tric.put(1,"Trichy \t\tThuraiyur \t80 dose");
-	Tric.put(2,"Trichy \t\tManapparai \t95 dose");
-	Tric.put(3,"Trichy \t\tSrirangam \t55 dose");
-	Tric.put(4,"Trichy \t\tLalgudi \t130 dose");
-	Tric.put(5,"Trichy \t\tThiruverumbur \t70 dose");
-	Tric.put(6,"Trichy \t\tPullambadi \t80 dose");
-	Tric.put(7,"Trichy \t\tAndanallur \t100 dose");
-															//Location with code
+	Trichy.put(1,"Trichy \t\tThuraiyur \t80 dose");
+	Trichy.put(2,"Trichy \t\tManapparai \t95 dose");
+	Trichy.put(3,"Trichy \t\tSrirangam \t55 dose");
+	Trichy.put(4,"Trichy \t\tLalgudi \t130 dose");
+	Trichy.put(5,"Trichy \t\tThiruverumbur \t70 dose");
+	Trichy.put(6,"Trichy \t\tPullambadi \t80 dose");
+	Trichy.put(7,"Trichy \t\tAndanallur \t100 dose");
+													//Location with code
 	System.out.println("---------------------------------------------------------");
 	System.out.println("location \t\tCode ");
 	System.out.println("---------------------------------------------------------");
@@ -58,20 +58,20 @@ public class VaccineCheck extends SelfRegistration{
 		System.out.println("Code \tCity \t\tArea \t\tAvailability");
 		System.out.println("---------------------------------------------------------");
 
-		Che.forEach((k,v) -> System.out.println( k + "\t" + v));
+		Chennai.forEach((k,v) -> System.out.println( k + "\t" + v));
 		System.out.println("---------------------------------------------------------");
 	}else if(city.equals("2")){
 		System.out.println("---------------------------------------------------------");
 		System.out.println("Code \tCity \t\tArea \t\tAvailability");
 		System.out.println("---------------------------------------------------------");
 
-		Coim.forEach((k,v) -> System.out.println( k + "\t" + v));
+		Coimbatore.forEach((k,v) -> System.out.println( k + "\t" + v));
 		System.out.println("---------------------------------------------------------");
 	}else if(city.equals("3")){
 		System.out.println("---------------------------------------------------------");
 		System.out.println("Code \tCity \t\tArea \t\tAvailability");
 		System.out.println("---------------------------------------------------------");
-		Tric.forEach((k,v) -> System.out.println( k + "\t" + v));
+		Trichy.forEach((k,v) -> System.out.println( k + "\t" + v));
 		System.out.println("---------------------------------------------------------");
 	}else{
 		System.out.println("Invalid !");
@@ -82,15 +82,15 @@ public class VaccineCheck extends SelfRegistration{
 		System.out.print("Enter valid Code \t\t: ");
 		int area = place.nextInt();
 		
-		String Chennai = Che.get(area);				//to get user data from Chennai 
-		String Coimbatore = Coim.get(area);			//to get user data from Coimbatore
-		String Trichy = Tric.get(area);				//to get user data from Trichy
+		String Chennai = this.Chennai.get(area);				//to get user key data from Chennai 
+		String Coimbatore = this.Coimbatore.get(area);				//to get user key data from Coimbatore
+		String Trichy = this.Trichy.get(area);					//to get user key data from Trichy
 		
 		System.out.println("---------------------------------------------------------");
 		System.out.println("Successfully registered !");
 		System.out.print("Booked : ");
-		if(city.equals("1")) {
-			System.out.println(Chennai);
+		if(city.equals("1")) {								//if user enter 1 it show list of chennai
+			System.out.println(Chennai);						//to show and get key value for users
 		}else if(city.equals("2")) {
 			System.out.println(Coimbatore);
 		}else if(city.equals("3")) {
@@ -99,6 +99,5 @@ public class VaccineCheck extends SelfRegistration{
 			System.out.println("Invalid !");
 		}
 		System.out.println("---------------------------------------------------------");
-
 	}
 }
