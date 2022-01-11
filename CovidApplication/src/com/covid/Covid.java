@@ -28,7 +28,7 @@ class Execute{
 		value = val.nextInt();
 		
 		switch(value){
-		case 1: reg.UserDetails();							//user details method calling
+		case 1: reg.UserDetails();								//user details method calling
 				reg.MobileNo();								//mobile no method calling
 		break;
 		
@@ -36,8 +36,8 @@ class Execute{
 		break;
 		
 		case 3: vc.Check();									//check method calling for availability
-				vc.Slot();									//slot method calling to select slot
-			 	reg.Book();									//book method to book slot
+				vc.Slot();								//slot method calling to select slot
+			 	reg.Book();								//book method to book slot
 		break;
 		
 		case 4: System.out.println("*************************");
