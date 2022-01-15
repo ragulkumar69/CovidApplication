@@ -5,13 +5,13 @@ import java.util.regex.*;
 import java.util.Scanner;
 
 class SelfRegistration{
-	protected String name;				//to name
-	protected String age;				//to age
-	protected String Aadhar;  			//to Aadhar
-	protected String Email;				//to Email
-	protected int num;				//to get random number for verification
-	protected String Mobile;			//to mobile number
-	protected int verify;				//to verify
+	private String name;				//to name
+	private String age;				//to age
+	private String Aadhar;  			//to Aadhar
+	private String Email;				//to Email
+	private int num;				//to get random number for verification
+	private String Mobile;				//to mobile number
+	private int verify;				//to verify
 	int num1;
 	
 	void UserDetails() {					//User Login Details and validation
